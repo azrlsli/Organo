@@ -3,15 +3,21 @@ import TextField from "../TextField";
 import DropDown from "../DropDown";
 import Button from "../Button";
 import { useState } from "react";
+import ICollaborator from "../../shared/interfaces/ICollaborator";
 
-const Form = (props) => {
+interface FormProps {
+  registeredEmployee: (collaborator: ICollaborator) => void;
+  times: string[];
+}
+
+const Form = (props: FormProps) => {
 
   const [nome, setNome] = useState('')
   const [cargo, setCargo] = useState('')
   const [imagem, setImagem] = useState('')
   const [time, setTime] = useState('')
 
-  const onSave = (event) => {
+  const onSave = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
     props.registeredEmployee({nome, cargo, imagem, time})
 
@@ -23,7 +29,7 @@ const Form = (props) => {
 
   return (
     <section className="form">
-      <form onSubmit={onSave}>
+      <form onSubmit={event => onSave(event)}>
         <h2>Preencha os dados para criar o card do colaborador:</h2>
         <TextField 
           obrigatorio={true} 

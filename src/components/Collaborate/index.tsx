@@ -1,6 +1,13 @@
 import './Collaborate.css';
 
-const Collaborate = ({nome, cargo, imagem, corDeFundo}) => {
+interface CollaborateProps {
+    nome: string
+    cargo: string
+    imagem: string
+    corDeFundo: string
+}
+
+const Collaborate = ({nome, cargo, imagem, corDeFundo}: CollaborateProps) => {
     return (
         <div className='collaborate'>
             <div className='header' style={{backgroundColor: corDeFundo}}>

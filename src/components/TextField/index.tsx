@@ -8,7 +8,7 @@ interface TextFieldProps {
     obrigatorio?: boolean
 }
 
-const TextField = ({ onChanged, label, obrigatorio, placeholder, valor } : TextFieldProps) => {
+const TextField = ({ onChanged, label, obrigatorio = false, placeholder, valor } : TextFieldProps) => {
 
     const aoDigitado = (evento: React.ChangeEvent<HTMLInputElement>) => {
         onChanged(evento.target.value)
