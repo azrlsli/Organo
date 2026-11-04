@@ -1,7 +1,5 @@
 import './Banner.css'
 
-import React from 'react';
-
 export interface BannerProps {
     enderecoImagem: string
     textoAlternativo?: string
