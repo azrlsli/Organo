@@ -16,15 +16,17 @@ const Form = (props: FormProps) => {
   const [cargo, setCargo] = useState('')
   const [imagem, setImagem] = useState('')
   const [time, setTime] = useState('')
+  const [data, setData] = useState('')
 
   const onSave = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
-    props.registeredEmployee({nome, cargo, imagem, time})
+    props.registeredEmployee({nome, cargo, imagem, time, data})
 
     setNome('')
     setCargo('')
     setImagem('')
     setTime('')
+    setData('')
   }
 
   return (
@@ -50,6 +52,13 @@ const Form = (props: FormProps) => {
           placeholder="Digite o endereço da imagem" 
           valor={imagem} 
           onChanged={valor => setImagem(valor)}
+        />
+        <TextField 
+          label="Data de entrada no time"
+          placeholder='Selecione a data'
+          valor={data} 
+          onChanged={valor => setData(valor)}
+          tipo="date"
         />
         <DropDown 
           obrigatorio={true} 

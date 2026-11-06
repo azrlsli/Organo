@@ -5,9 +5,10 @@ interface CollaborateProps {
     cargo: string
     imagem: string
     corDeFundo: string
+    data: string
 }
 
-const Collaborate = ({nome, cargo, imagem, corDeFundo}: CollaborateProps) => {
+const Collaborate = ({nome, cargo, imagem, corDeFundo, data}: CollaborateProps) => {
     return (
         <div className='collaborate'>
             <div className='header' style={{backgroundColor: corDeFundo}}>
@@ -16,6 +17,7 @@ const Collaborate = ({nome, cargo, imagem, corDeFundo}: CollaborateProps) => {
             <div className='footer'>
                 <h4>{nome}</h4>
                 <h5>{cargo}</h5>
+                <h5>{new Date(data).toLocaleDateString()}</h5>
             </div>
         </div>
     )
