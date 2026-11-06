@@ -1,70 +1,86 @@
-# Getting Started with Create React App
+# Organo
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Aplicação em React para organizar colaboradores por área/times em um painel visual. O projeto permite cadastrar profissionais, definir o time ao qual pertencem e exibir esses cards em colunas coloridas, facilitando a visualização da estrutura da equipe.
 
-## Available Scripts
+## Funcionalidades
 
-In the project directory, you can run:
+- Cadastro de novos colaboradores
+- Organização por área ou time
+- Cards visuais com cores personalizadas por categoria
+- Estrutura simples e didática para estudo e extensão
+- Interface responsiva para visualização em diferentes tamanhos de tela
 
-### `npm start`
+## Tecnologias utilizadas
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+- React
+- JavaScript
+- CSS
+- React Scripts
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Pré-requisitos
 
-### `npm test`
+Antes de rodar o projeto, certifique-se de ter instalado:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+- Node.js 18 ou superior
+- npm
 
-### `npm run build`
+## Instalação
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Clone o repositório e acesse a pasta do projeto:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+```bash
+git clone https://github.com/azrlsli/Organo.git
+cd Organo
+```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Instale as dependências:
 
-### `npm run eject`
+```bash
+npm install
+```
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## Executando o projeto
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Inicie o servidor de desenvolvimento:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+```bash
+npm start
+```
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+A aplicação ficará disponível em:
 
-## Learn More
+```bash
+http://localhost:3000
+```
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+## Build de produção
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Para gerar uma versão otimizada para produção:
 
-### Code Splitting
+```bash
+npm run build
+```
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+Os arquivos prontos para publicação serão criados na pasta `build/`.
 
-### Analyzing the Bundle Size
+## Estrutura do projeto
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+```text
+src/
+├── App.js
+├── index.css
+├── index.js
+├── components/
+│   ├── Banner/
+│   ├── Button/
+│   ├── Collaborate/
+│   ├── DropDown/
+│   ├── Footer/
+│   ├── Form/
+│   ├── TextField/
+│   └── Time/
+```
 
-### Making a Progressive Web App
+## Observações
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Este projeto é uma aplicação frontend de apresentação e gestão visual de times, ideal para estudo, prototipagem ou evolução em projetos maiores.
